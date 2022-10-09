@@ -1,25 +1,25 @@
 ﻿//Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 
-void MyMetod()
+void MyMetod(int d)
 {
-    int day;
+    int day = d;
 
-    if (day > 7 && day < 1)
+    if (d > 0 && d < 8)
+    {
+        if (d == 6 || d == 7)
+        {
+            Console.Write("Да, сегодня выходной");
+        }
+        else
+        {
+            Console.Write("Нет, сегодня не выходной");
+        }
+    }
+    else
     {
         Console.Write("Неправильно ввели день недели!");
     }
-
-    if (day == 6 && day == 7)
-    {
-        Console.Write("Да, сегодня выходной");
-    }
-
-    else
-    {
-        Console.Write("Нет, сегодня не выходной");
-    }
-
 }
 Console.Write("Введите день недели: ");
 int day = Convert.ToInt32(Console.ReadLine());
-MyMetod();
+MyMetod(day);
