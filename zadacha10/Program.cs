@@ -2,20 +2,20 @@
 
 void Main()
 {
-  int secondnumber;
+    int secondnumber;
     Console.Write("Введите 3-х значное число:");
     int number = Convert.ToInt32(Console.ReadLine());
 
-  if (number < 1000 && number != 000)
-  {
-   secondnumber = ((number % 100)- (number % 10)) / 10;
-   Console.Write("вторая цифра трёхзначного числа = ");
-   Console.WriteLine(secondnumber);
-  }
-  else
-  {
-    Console.Write("неправильно ввели число");
-  }
+    if (number < 1000 && number != 000)
+    {
+        secondnumber = ((number % 100) - (number % 10)) / 10;
+        Console.Write("вторая цифра трёхзначного числа = ");
+        Console.WriteLine(secondnumber);
+    }
+    else
+    {
+        Console.Write("неправильно ввели число");
+    }
 }
 
 Main();
